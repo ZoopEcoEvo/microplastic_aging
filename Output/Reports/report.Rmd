@@ -1,0 +1,40 @@
+---
+title: TITLE HERE
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    code_folding: hide
+    code_download: true
+    toc: true
+    toc_float: true
+  github_document:
+    html_preview: false
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include = FALSE}
+library(here)
+library(tidyverse)
+
+# Lab plotting themes live in one shared file: theme_matt(), theme_matt_facets()
+source(here("Scripts", "themes.R"))
+
+knitr::opts_chunk$set(
+  echo = knitr::is_html_output(),
+  fig.align = "center",
+  # Figures are saved as Output/Figures/<chunk-label>-1.png (and .pdf),
+  # which is where the manuscript looks for them. This path is kept relative
+  # (to this file's folder) so image links in the GitHub .md version work.
+  fig.path = "../Figures/",
+  dev = c("png", "pdf"),
+  message = FALSE,
+  warning = FALSE,
+  collapse = TRUE
+)
+```
+
+```{r load-data}
+# Read the processed data written by Scripts/01_data_processing.R
+# data <- read_csv(here("Output", "Output_data", "processed_data.csv"))
+```

@@ -1,0 +1,84 @@
+---
+output: 
+  pdf_document:
+    template: preprint_template.tex
+    fig_caption: true
+    keep_tex: false
+    citation_package: natbib
+  word_document: 
+    reference_docx: doc_template.docx
+title: "TITLE"
+author:
+  - name: Author 1
+    affiliation: Place 1
+  - name: Author 2
+    affiliation: Place 2
+  - name: Author 3
+    affiliation: Place 3
+abstract: "ABSTRACT HERE."
+keywords: "keyword1, keyword2, keyword3"
+contact: "**Correspondence**: ___" 
+current: "This preprint is current as of `r format(Sys.time(), '%B %d, %Y')`"
+repo: "**Code**: ___"
+bibliography: references.bib
+biblio-style: bib-style
+geometry: margin=1in
+fontsize: 10pt
+graphics: yes
+header-includes: 
+  \usepackage{caption}    
+  \captionsetup[figure]{font=small, margin=20pt, justification=centering}
+  \captionsetup[table]{font=small, margin=20pt, justification=centering}
+  \usepackage{float} \floatplacement{figure}{H} 
+  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+---
+
+```{r setup, include = FALSE}
+library(here)
+
+# Applies to both the PDF and Word outputs
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  message = FALSE,
+  warning = FALSE,
+  collapse = TRUE)
+```
+
+# Introduction
+
+# Methods
+
+## Statistical Analysis
+
+# Results
+
+```{r figure, out.width="100%"}
+#| fig.cap = "CAPTION HERE."
+
+plot(1)
+# Figures made in report.Rmd are saved as Output/Figures/<chunk-label>-1.png
+# knitr::include_graphics(here("Output", "Figures", "CHUNK-LABEL-1.png"))
+```
+
+```{r table}
+knitr::kable(x = 1, #Replace 1 with whatever object you want included as a table
+      digits = 3, align = "c",
+      caption = "CAPTION HERE")
+```
+
+# Discussion
+
+\newpage
+
+```{=tex}
+\beginsupplement
+```
+# Supplementary Material
+
+```{r supp-fig-1, out.width="100%"}
+#| fig.cap = "CAPTION HERE."
+
+plot(1)
+# knitr::include_graphics(here("Output", "Figures", "CHUNK-LABEL-1.png"))
+```
