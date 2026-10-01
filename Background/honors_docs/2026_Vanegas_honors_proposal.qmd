@@ -2,29 +2,15 @@
 title: "Honors College Thesis Proposal"
 format:
   typst:
+    linestretch: 1
     toc: false
     number-sections: false
     mainfont: arial
+    fontsize: 10pt
+    clean: true
 author: "Jackson Vanegas"
 subtitle: "Does aging microplastics alter how microplastics affect the physiology of a freshwater copepod"
-date: today
 ---
-
-**Proposal Instructions**
-
-Your proposal must be generated with this quarto file, but the styling/aesthetics are largely up to you. If you include images, schematics, figures, etc. (optional), they do not need to be internally generated - keep in mind, however, that the document will not render if the file paths are incorrect.
-
-Your proposal must be well-cited. It's hard to provide a minimum or maximum number of required citations, but you should aim for at least 10 references.
-
-Save the file / PDF output as YYYY_LASTNAME_HONORS_PROPOSAL.pdf
-
-- YYYY = Year in 4-digit format (e.g. 2025)
-- LASTNAME = your last name in upper case (e.g. SASAKI)
-- Combined, the PDF file name should be something like "2025_SASAKI_HONORS_PROPOSAL.pdf"
-
-Once completed, send your draft .qmd file to Matt for review. You may need to go through several iterations before the draft is ready to be shared with your committee member.
-
-The instructions above should be removed before submitting your proposal. The sections below should be used for the proposal (just replace the text under each heading). Additional sections may be added if needed.
 
 ## Thesis Details
 
@@ -37,36 +23,48 @@ The instructions above should be removed before submitting your proposal. The se
 
 ## Proposal Background
 
-Microplastics are a growing concern in the world today. The amount of these microplastics has been increasing over the years and not much is known about their long term effects on living organisms. Microplastics have been observed to acquire biofilms of microscopic organisms such as bacteria and algae while in the environment (Ballesté et al., 2024).
+Microplastics are a growing concern in the world today. <!--# Maybe more detail on what microplastics are? Size range, composition, etc. -->The amount of these microplastics has been increasing over the years (REF) <!--#  -->, but not much is known about their long term effects on living organisms. Microplastics have been observed to acquire <!--# change to "microbial biofilms under natural conditions (Ballesté et al. 2024)." -->biofilms of microscopic organisms such as bacteria and algae while in the environment (Ballesté et al., 2024).
 
-Copepods are small, aquatic zooplankton that consume phytoplankton and are one of the most important organisms in the food chain as they consume phytoplankton and they themselves are a very abundant, protein rich food source for animals as small as fish larvae to whales. Preliminary studies have been done on marine copepods and microplastics. Studies have shown a potential hormetic curve with their CTmax when consuming a small quantity of microplastics (Zhang et al., 2025). Other studies have also pointed out that copepods are able to detect microplastics and spit them out at a success rate of up to 80% on average due to their very sensitive mouth parts. This research was done in marine copepod species, and states that they are able to reject the microplastics regardless of the presence of a biofilm (Xu et al., 2022). Other studies however, point towards varying species of copepods having varying rates of rejection of the microplastics (Fagiano et al., 2025). Also given the presence of a biofilm on a microplastic there could be some nutritional benefit to consuming it for an organism like a copepod (Botterell et al., 2020). This research project aims to find out if these microplastics covered in a biofilm have some nutritional benefit to the copepod.
+Copepods are small zooplankton are some of the most important organisms in the food chain as they consume phytoplankton and they themselves are a very abundant, protein rich food source for animals as small as fish larvae to whales. <!--# Needs a bridge statement to link copepods to microplastics - "Given their important role in foodwebs, how copepods respond to increasing exposure to microplastics will have strong effects on XYZ" or something like that --> Previous studies with marine copepods have shown a potential hormetic <!--# make sure to define this --> curve with their CTmax when consuming a small quantity of microplastics (Zhang et al., 2025) <!--# is this paper in the zotero? Seems interesting and would love to read it, but can't find it-->. Other studies have also pointed out that copepods are able to detect microplastics and avoid them when feeding with a success rate of up to 80% (REF) <!--#  -->, <!--# I condensed these sentences here -->even in the presence of a biofilm (Xu et al., 2022). These dynamics and the effects of biofilms may, however, vary across species (Fagiano et al., 2025 <!--# changed the sentence a bit - does this paper address biofilm effect or just the selective feeding? -->).
 
-Note - the visual editor function for these quarto documents includes a citation function that can connect to your Zotero library and create a formatted reference section. Use this functionality!
+<!--# I think a new paragraph here dealing with starvation effects is useful -->
+
+The effect of particle aging and biofilm formation may also depend on the nutritional state of the copepod. Under low-food conditions, the presence of a biofilm may provide some nutritional benefit to grazers (Botterell et al., 2020), thus reducing the selective feeding behaviour and increasing exposure to microplastics.
 
 ## Research Questions and Hypotheses
 
-The question being addressed is: Does aging microplastics alter how microplastics affect the physiology of a freshwater copepod?
+This research project will examine the effects of microplastic exposure on copepod physiology, and test whether these effects are altered by aging in environmental water samples (i.e. promoting the formation of a biofilm). <!--# Moved this sentence here from the end of the last section -->The question being addressed is: Does aging microplastics alter how microplastics affect the physiology of a freshwater copepod? <!--# I think this sentence should be: "We have three primary questions: -->
 
-Hypothesis
+<!--# For this section, can we organize it as Question and hypothesis? -->
 
-1.  Aged microplastics containing a biofilm will have some beneficial value which will keep the CTmax at typical levels.
+**Question 1:** Does exposure to microplastics affect upper thermal limits in the freshwater copepod *Skistodiaptomus pallidus*?
 
-Provide a concise statement about the question(s) your project addresses. Based on these questions, what are your hypotheses.
+> *Hypothesis 1*: XYZ
+
+**Question 2:** Does the effect of microplastics on upper thermal limits differ between aged and un-aged microplastics?
+
+> *Hypothesis 2*: XYZ
+
+**Question 3:** Does starvation alter the effects of microplastics on upper thermal limits?
+
+> *Hypothesis 3*: XYZ
 
 ## Experimental Design
 
-![](images/Screenshot%202026-09-29%20at%2011.31.16%20AM-01.png){width="545"}
+![](images/Experimental-Design.png){width="406"}
 
 ### Hypothesis Testing
 
-We will be using a mixed effects model to test our hypotheses. <!--# Moved this sentence to the start of the section --> We are testing two hypotheses. Our hypothesis that XYZ <!--# state hypothesis here --> is supported if ABC <!--# provide evidence for the hypothesis -->. Using the treatment groups in the experimental design we should see a similarity in data between Fed and No MP and Starved and BF MP if the hypothesis is supported.
+We will be using a mixed effects model to test our hypotheses. <!--# Moved this sentence to the start of the section --> We are testing three hypotheses.
 
-Explain how your data will be used to test the hypotheses you've proposed.
+For our hypothesis that XYZ <!--# state hypothesis here --> we expect to see ABC if the hypothesis is supported <!--# provide evidence for the hypothesis, tied to the mixed effects model in this case -->.
+
+{{< pagebreak >}}
 
 ## Project Timeline
 
 | Month | Progress |
-|------------------------------------|------------------------------------|
+|--------------:|---------------------------------------------------------|
 | September | Background reading, Planning, 1st experimental replicate |
 | October | Experimental replicates, prepare poster on preliminary data |
 | November | Final Experimental Replicates, Data analysis |
