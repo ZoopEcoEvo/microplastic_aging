@@ -27,9 +27,7 @@ Microplastics are a growing concern in the world today. Microplastics are 5mm or
 
 Copepods are small zooplankton are some of the most important organisms in the food chain as they consume phytoplankton and they themselves are a very abundant, protein rich food source for animals as small as fish larvae to whales. Given their important role in foodwebs, how copepods respond to increasing exposure to microplastics will have strong effects on the a large portion of the food web. Previous studies with marine copepods have shown a potential hormetic curve (small amount of toxin has positive effect) with their CTmax when consuming a small quantity of microplastics (Zhang et al., 2025). Other studies have also pointed out that copepods are able to detect microplastics and avoid them when feeding with a success rate of up to 80%, even in the presence of a biofilm (Xu et al., 2022). These dynamics and the effects of biofilms may, however, vary across species (Fagiano et al., 2025)
 
-Starvation also has adverse effects on copepods. One of those effects being thermal limits. It has been found that starvation significantly lowers thermal limits (Moreno and Sasaki, 2023).
-
-The effect of particle aging and biofilm formation may also depend on the nutritional state of the copepod. Under low-food conditions, the presence of a biofilm may provide some nutritional benefit to grazers (Botterell et al., 2020), thus reducing the selective feeding behaviour and increasing exposure to microplastics.
+Starvation also has adverse effects on copepod thermal limits. In one marine species, for example, it has been found that starvation significantly lowers thermal limits (Moreno and Sasaki, 2023). The effect of particle aging and biofilm formation may also depend on the nutritional state of the copepod. Under low-food conditions, the presence of a biofilm may provide some nutritional benefit to grazers (Botterell et al., 2020), offsetting the effects of starvation. Alternatively, biofilms may reduce the selective feeding behaviour, thus increasing exposure to microplastics.
 
 ## Research Questions and Hypotheses
 
@@ -41,11 +39,11 @@ This research project will examine the effects of microplastic exposure on copep
 
 **Question 2:** Does the effect of microplastics on upper thermal limits differ between aged and un-aged microplastics?
 
-> *Hypothesis 2*: The upper thermal limit for aged microplastics will be higher than the upper thermal limit for un-aged microplastics.
+> *Hypothesis 2*: The upper thermal limit for copepods exposed to aged microplastics will be higher than the upper thermal limit for those exposed to un-aged microplastics.
 
-**Question 3:** Does starvation alter the effects of microplastics on upper thermal limits?
+**Question 3:** Does microplastic aging alter the effect of starvation on upper thermal limits?
 
-> *Hypothesis 3*: Starvation will alter the effects of microplastics on upper thermal limits. Starved copepods with aged microplastics will have a more stable thermal limit while starved copepods with un-aged microplastics will have a sharp decrease in thermal limits.
+> *Hypothesis 3*: Becuase of the nutritional content of biofilms, starved copepods with aged microplastics will exhibit a smaller decrease in thermal limit relative to the control copepods, while starved copepods with un-aged microplastics will exhibit a sharp decrease in thermal limits.
 
 ## Experimental Design
 
@@ -62,7 +60,7 @@ For our hypothesis that the upper thermal limit for aged microplastics will be h
 ## Project Timeline
 
 | Month | Progress |
-|----------------:|-------------------------------------------------------|
+|-----------------:|------------------------------------------------------|
 | September | Background reading, Planning, 1st experimental replicate |
 | October | Experimental replicates, prepare poster on preliminary data |
 | November | Final Experimental Replicates, Data analysis |
