@@ -23,48 +23,46 @@ subtitle: "Does aging microplastics alter how microplastics affect the physiolog
 
 ## Proposal Background
 
-Microplastics are a growing concern in the world today. <!--# Maybe more detail on what microplastics are? Size range, composition, etc. -->The amount of these microplastics has been increasing over the years (REF) <!--#  -->, but not much is known about their long term effects on living organisms. Microplastics have been observed to acquire <!--# change to "microbial biofilms under natural conditions (Ballesté et al. 2024)." -->biofilms of microscopic organisms such as bacteria and algae while in the environment (Ballesté et al., 2024).
+Microplastics are a growing concern in the world today. Microplastics are 5mm or less in size and vary in shape and in composition (e.g. polyethylene, polypropylene, etc). The amount of these microplastics has been increasing over the years (Reddy and Lau, 2020), but not much is known about their long term effects on living organisms. Microplastics have been observed to acquire microbial biofilms under natural conditions (Ballesté et al., 2024).
 
-Copepods are small zooplankton are some of the most important organisms in the food chain as they consume phytoplankton and they themselves are a very abundant, protein rich food source for animals as small as fish larvae to whales. <!--# Needs a bridge statement to link copepods to microplastics - "Given their important role in foodwebs, how copepods respond to increasing exposure to microplastics will have strong effects on XYZ" or something like that --> Previous studies with marine copepods have shown a potential hormetic <!--# make sure to define this --> curve with their CTmax when consuming a small quantity of microplastics (Zhang et al., 2025) <!--# is this paper in the zotero? Seems interesting and would love to read it, but can't find it-->. Other studies have also pointed out that copepods are able to detect microplastics and avoid them when feeding with a success rate of up to 80% (REF) <!--#  -->, <!--# I condensed these sentences here -->even in the presence of a biofilm (Xu et al., 2022). These dynamics and the effects of biofilms may, however, vary across species (Fagiano et al., 2025 <!--# changed the sentence a bit - does this paper address biofilm effect or just the selective feeding? -->).
+Copepods are small zooplankton are some of the most important organisms in the food chain as they consume phytoplankton and they themselves are a very abundant, protein rich food source for animals as small as fish larvae to whales. Given their important role in foodwebs, how copepods respond to increasing exposure to microplastics will have strong effects on the a large portion of the food web. Previous studies with marine copepods have shown a potential hormetic curve (small amount of toxin has positive effect) with their CTmax when consuming a small quantity of microplastics (Zhang et al., 2025). Other studies have also pointed out that copepods are able to detect microplastics and avoid them when feeding with a success rate of up to 80%, even in the presence of a biofilm (Xu et al., 2022). These dynamics and the effects of biofilms may, however, vary across species (Fagiano et al., 2025)
 
-<!--# I think a new paragraph here dealing with starvation effects is useful -->
+Starvation also has adverse effects on copepods. One of those effects being thermal limits. It has been found that starvation significantly lowers thermal limits (Moreno and Sasaki, 2023).
 
 The effect of particle aging and biofilm formation may also depend on the nutritional state of the copepod. Under low-food conditions, the presence of a biofilm may provide some nutritional benefit to grazers (Botterell et al., 2020), thus reducing the selective feeding behaviour and increasing exposure to microplastics.
 
 ## Research Questions and Hypotheses
 
-This research project will examine the effects of microplastic exposure on copepod physiology, and test whether these effects are altered by aging in environmental water samples (i.e. promoting the formation of a biofilm). <!--# Moved this sentence here from the end of the last section -->The question being addressed is: Does aging microplastics alter how microplastics affect the physiology of a freshwater copepod? <!--# I think this sentence should be: "We have three primary questions: -->
-
-<!--# For this section, can we organize it as Question and hypothesis? -->
+This research project will examine the effects of microplastic exposure on copepod physiology, and test whether these effects are altered by aging in environmental water samples (i.e. promoting the formation of a biofilm). For this research project we have three primary questions
 
 **Question 1:** Does exposure to microplastics affect upper thermal limits in the freshwater copepod *Skistodiaptomus pallidus*?
 
-> *Hypothesis 1*: XYZ
+> *Hypothesis 1*: Exposure to microplastics will affect upper thermal limits in the freshwater copepod *Skistodiaptomus pallidus.*
 
 **Question 2:** Does the effect of microplastics on upper thermal limits differ between aged and un-aged microplastics?
 
-> *Hypothesis 2*: XYZ
+> *Hypothesis 2*: The upper thermal limit for aged microplastics will be higher than the upper thermal limit for un-aged microplastics.
 
 **Question 3:** Does starvation alter the effects of microplastics on upper thermal limits?
 
-> *Hypothesis 3*: XYZ
+> *Hypothesis 3*: Starvation will alter the effects of microplastics on upper thermal limits. Starved copepods with aged microplastics will have a more stable thermal limit while starved copepods with un-aged microplastics will have a sharp decrease in thermal limits.
 
 ## Experimental Design
 
-![](images/Experimental-Design.png){width="406"}
+Add net above first treatment
 
 ### Hypothesis Testing
 
-We will be using a mixed effects model to test our hypotheses. <!--# Moved this sentence to the start of the section --> We are testing three hypotheses.
+We will be using a mixed effects model to test our hypotheses. We are testing three hypotheses.
 
-For our hypothesis that XYZ <!--# state hypothesis here --> we expect to see ABC if the hypothesis is supported <!--# provide evidence for the hypothesis, tied to the mixed effects model in this case -->.
+For our hypothesis that the upper thermal limit for aged microplastics will be higher than the upper thermal limit for un-aged microplastics we expect to see a similar thermal limit in the starved and aged microplastics group compared to fed with no microplastics group if the hypothesis is supported <!--# provide evidence for the hypothesis, tied to the mixed effects model in this case -->.
 
 {{< pagebreak >}}
 
 ## Project Timeline
 
 | Month | Progress |
-|--------------:|---------------------------------------------------------|
+|----------------:|-------------------------------------------------------|
 | September | Background reading, Planning, 1st experimental replicate |
 | October | Experimental replicates, prepare poster on preliminary data |
 | November | Final Experimental Replicates, Data analysis |
