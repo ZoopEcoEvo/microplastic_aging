@@ -40,6 +40,8 @@ surv_data |>
   mutate(prop_mortality = num_dead /total) |> 
   ggplot(aes(x = MP_treatment, y = prop_mortality, colour = diet)) + 
   geom_point(size = 3) + 
+  labs(x = "Treatment", 
+       y = "Mortality (proportion)") + 
   theme_matt() + 
   theme(legend.position = "right")
 
@@ -51,6 +53,8 @@ ctmax_data |>
   ggplot(aes(x = MP_treatment, y = ctmax_c, fill = diet)) + 
   geom_boxplot(position = position_dodge(width = 0.75)) + 
   geom_point(position = position_dodge(width = 0.75)) + 
+  labs(x = "Treatment", 
+       y = "CTmax (°C)") + 
   theme_matt() + 
   theme(legend.position = "right")
 
