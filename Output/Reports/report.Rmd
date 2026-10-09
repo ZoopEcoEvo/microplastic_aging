@@ -14,8 +14,8 @@ output:
 ---
 
 ```{r setup, include = FALSE}
-library(here)
-library(tidyverse)
+library(lme4)
+library(lmerTest)
 
 # Lab plotting themes live in one shared file: theme_matt(), theme_matt_facets()
 source(here("Scripts", "themes.R"))
@@ -34,7 +34,35 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r load-data}
-# Read the processed data written by Scripts/01_data_processing.R
-# data <- read_csv(here("Output", "Output_data", "processed_data.csv"))
+```{r}
+
+surv_data |> 
+  mutate(prop_mortality = num_dead /total) |> 
+  ggplot(aes(x = MP_treatment, y = prop_mortality, colour = diet)) + 
+  geom_point(size = 3) + 
+  theme_matt() + 
+  theme(legend.position = "right")
+
 ```
+
+```{r}
+
+ctmax_data |> 
+  ggplot(aes(x = MP_treatment, y = ctmax_c, fill = diet)) + 
+  geom_boxplot(position = position_dodge(width = 0.75)) + 
+  geom_point(position = position_dodge(width = 0.75)) + 
+  theme_matt() + 
+  theme(legend.position = "right")
+
+```
+
+
+```{r}
+
+ctmax.model = lmer(data = ctmax_data, 
+                   ctmax_c ~ MP_treatment * diet + (1|file_source))
+
+car::Anova(ctmax.model, type = "III")
+
+```
+

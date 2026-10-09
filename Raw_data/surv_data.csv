@@ -10,4 +10,4 @@ exp_rep,date,treatment,treatment_rep,total,num_dead
 1,2026-10-08,Aged MP - Fed,A,7,1
 1,2026-10-08,Control - Starved,B,7,3
 1,2026-10-08,Aged MP - Starved,B,13,6
-1,2026-10-08,Control - Fed,B,9,9
+1,2026-10-08,Control - Fed,B,9,0

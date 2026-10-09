@@ -9,6 +9,7 @@
 
 library(here)
 library(rmarkdown)
+library(tidyverse)
 
 # Choose which steps to run -----------------------------------------------
 process_data    <- FALSE # Raw_data/ -> Output/Output_data/
@@ -22,7 +23,22 @@ if (process_data) {
 
 # Step 2: Render the project report ----------------------------------------
 if (make_report) {
-  render(input = here("Output", "Reports", "report.Rmd"),
+  # 1. Get a list of all CSV file paths in the directory
+  files <- list.files(path = "Raw_data", pattern = "^CTmax.*\\.csv$", full.names = TRUE)
+  
+  # 2. Read and stack them instantly into a single data frame
+  # The `id` argument creates a new column showing which file the data came from
+  ctmax_data <- read_csv(files, id = "file_source") |> 
+    separate_wider_delim(treatment, delim = " - ", 
+                         names = c("MP_treatment", "diet")) |> 
+    mutate(MP_treatment = fct_relevel(MP_treatment, "Control", "MP", "Aged MP"))
+  
+  surv_data = read_csv((file = "Raw_data/surv_data.csv")) |> 
+    separate_wider_delim(treatment, delim = " - ", 
+                         names = c("MP_treatment", "diet")) |> 
+    mutate(MP_treatment = fct_relevel(MP_treatment, "Control", "MP", "Aged MP"))
+  
+  render(input = "Output/Reports/report.Rmd",
          output_format = "all",
          envir = new.env())
 }
