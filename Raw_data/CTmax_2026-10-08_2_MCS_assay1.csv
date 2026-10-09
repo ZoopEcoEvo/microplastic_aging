@@ -1,0 +1,12 @@
+observer_initials,experiment_date,water_bath_id,thermometer_id,assay,ramp_start,tube,group_id,treatment,ctmax_c,ctmax_time,time_to_ctmax_min,thermometer_tube,notes
+MCS,2026-10-08,2,D,1,16:06:34,1,MP - Fed,MP - Fed,36.6,17:01:32,54.96,3,A
+MCS,2026-10-08,2,D,1,16:06:34,2,MP - Starved,MP - Starved,34,16:36:44,30.16,3,B
+MCS,2026-10-08,2,D,1,16:06:34,4,Control - Starved,Control - Starved,36.4,16:58:55,52.34,3,B
+MCS,2026-10-08,2,D,1,16:06:34,5,Aged MP - Fed,Aged MP - Fed,35.6,16:50:04,43.49,3,A
+MCS,2026-10-08,2,D,1,16:06:34,6,Control - Starved,Control - Starved,32.7,16:27:27,20.87,3,A
+MCS,2026-10-08,2,D,1,16:06:34,7,Aged MP - Starved,Aged MP - Starved,35.7,16:51:02,44.46,3,A
+MCS,2026-10-08,2,D,1,16:06:34,8,Aged MP - Fed,Aged MP - Fed,37,17:06:19,59.74,3,B
+MCS,2026-10-08,2,D,1,16:06:34,9,Aged MP - Starved,Aged MP - Starved,31.4,16:19:41,13.11,3,B
+MCS,2026-10-08,2,D,1,16:06:34,10,Control - Fed,Control - Fed,36.5,16:59:49,53.24,3,B
+MCS,2026-10-08,2,D,1,16:06:34,11,Control - Fed,Control - Fed,35.8,16:51:31,44.94,3,A
+MCS,2026-10-08,2,D,1,16:06:34,12,MP - Fed,MP - Fed,37.1,17:07:09,60.57,3,B
