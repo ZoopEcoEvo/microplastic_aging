@@ -35,7 +35,7 @@ This research project will examine the effects of microplastic exposure on copep
 
 **Question 1:** Does exposure to microplastics affect upper thermal limits in the freshwater copepod *Skistodiaptomus pallidus*?
 
-> *Hypothesis 1*: Exposure to microplastics will affect upper thermal limits in the freshwater copepod *Skistodiaptomus pallidus.*
+> *Hypothesis 1*: Exposure to microplastics will decrease the thermal limits in the freshwater copepod *Skistodiaptomus pallidus.*
 
 **Question 2:** Does the effect of microplastics on upper thermal limits differ between aged and un-aged microplastics?
 
@@ -47,7 +47,7 @@ This research project will examine the effects of microplastic exposure on copep
 
 ## Experimental Design
 
-![](images/Screenshot 2026-10-12 at 12.39.12 PM.png)
+Add net above first treatment
 
 ### Hypothesis Testing
 
