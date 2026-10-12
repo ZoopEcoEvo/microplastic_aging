@@ -60,7 +60,7 @@ For our hypothesis that the upper thermal limit for aged microplastics will be h
 ## Project Timeline
 
 | Month | Progress |
-|-----------------:|------------------------------------------------------|
+|---:|----|
 | September | Background reading, Planning, 1st experimental replicate |
 | October | Experimental replicates, prepare poster on preliminary data |
 | November | Final Experimental Replicates, Data analysis |
