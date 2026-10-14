@@ -60,7 +60,7 @@ Hypothesis 1 will be comparing the fed control group to the fed un-aged micropla
 ## Project Timeline
 
 | Month | Progress |
-|-----------------------------------:|------------------------------------|
+|---:|----|
 | September | Background reading, Planning, 1st experimental replicate |
 | October | Experimental replicates, prepare poster on preliminary data |
 | November | Final Experimental Replicates, Data analysis |
