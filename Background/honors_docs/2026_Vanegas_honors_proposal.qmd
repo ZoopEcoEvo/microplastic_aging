@@ -43,7 +43,7 @@ This research project will examine the effects of microplastic exposure on copep
 
 **Question 3:** Does microplastic aging alter the effect of starvation on upper thermal limits?
 
-> *Hypothesis 3*: Becuase of the nutritional content of biofilms, starved copepods with aged microplastics will exhibit a smaller decrease in thermal limit relative to the control copepods, while starved copepods with un-aged microplastics will exhibit a sharp decrease in thermal limits.
+> *Hypothesis 3*: Because of the nutritional content of biofilms, starved copepods with aged microplastics will exhibit a smaller decrease in thermal limit relative to the control copepods, while starved copepods with un-aged microplastics will exhibit a sharp decrease in thermal limits.
 
 ## Experimental Design
 
@@ -53,7 +53,7 @@ This research project will examine the effects of microplastic exposure on copep
 
 We will be using a mixed effects model to test our hypotheses. We are testing three hypotheses.
 
-For our hypothesis that the upper thermal limit for aged microplastics will be higher than the upper thermal limit for un-aged microplastics we expect to see a similar thermal limit in the starved and aged microplastics group compared to fed with no microplastics group if the hypothesis is supported <!--# provide evidence for the hypothesis, tied to the mixed effects model in this case -->.
+Hypothesis 2 is that the upper thermal limit of copepods exposed to aged microplastics will be higher than the upper thermal limit of copepods exposed to for un-aged microplastics. We expect to see a similar thermal limit in the starved and aged microplastics group compared to fed with no microplastics group if the hypothesis is supported <!--# provide evidence for the hypothesis, tied to the mixed effects model in this case -->.
 
 {{< pagebreak >}}
 
