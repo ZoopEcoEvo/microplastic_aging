@@ -47,13 +47,11 @@ This research project will examine the effects of microplastic exposure on copep
 
 ## Experimental Design
 
-![](images/exp_design.png)
-
 ### Hypothesis Testing
 
 We will be using a mixed effects model to test our hypotheses. We are testing three hypotheses.
 
-Hypothesis 2 is that the upper thermal limit of copepods exposed to aged microplastics will be higher than the upper thermal limit of copepods exposed to for un-aged microplastics. We expect to see a similar thermal limit in the starved and aged microplastics group compared to fed with no microplastics group if the hypothesis is supported <!--# provide evidence for the hypothesis, tied to the mixed effects model in this case -->.
+Hypothesis 1 will be comparing the fed control group to the fed un-aged microplastic group. We expect to see a decrease in CTmax for the fed un-aged microplastic group compared to the fed control group. Hypothesis 2 is comparing the fed un-aged microplastic group to the fed aged microplastic group. We expect to see a higher CTmax for the fed aged microplastic group compared to the fed un-aged microplastic group. Hypothesis 3 will be comparing both of the control groups, the starved un-aged microplastic group, and the starved aged microplastic group. We expect to see a smaller decrease in CTmax for the starved aged microplastic group relative to the fed control group, while the starved un-aged microplastics and the starved control group will see a sharper decrease in CTmax.
 
 {{< pagebreak >}}
 
