@@ -47,6 +47,8 @@ This research project will examine the effects of microplastic exposure on copep
 
 ## Experimental Design
 
+![](images/experimental_design.png)
+
 ### Hypothesis Testing
 
 We will be using a mixed effects model to test our hypotheses. We are testing three hypotheses.
