@@ -38,11 +38,13 @@ knitr::opts_chunk$set(
 
 surv_data |> 
   mutate(prop_mortality = num_dead /total) |> 
-  ggplot(aes(x = MP_treatment, y = prop_mortality, colour = diet)) + 
-  geom_point(size = 3) + 
+  ggplot(aes(x = MP_treatment, y = prop_mortality, fill = diet)) + 
+  geom_boxplot(position = position_dodge(width = 0.85),
+               outliers = F) + 
+  geom_point(alpha = 0.5, position = position_dodge(width = 0.85)) + 
   labs(x = "Treatment", 
        y = "Mortality (proportion)") + 
-  theme_matt() + 
+  theme_matt_facets() + 
   theme(legend.position = "right")
 
 ```

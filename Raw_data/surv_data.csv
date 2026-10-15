@@ -1,13 +1,25 @@
-exp_rep,date,treatment,treatment_rep,total,num_dead
-1,2026-10-08,MP - Starved,A,10,3
-1,2026-10-08,Aged MP - Starved,A,10,6
-1,2026-10-08,Control - Fed,A,10,1
-1,2026-10-08,Control - Starved,A,8,4
-1,2026-10-08,Aged MP - Fed,B,8,0
-1,2026-10-08,MP - Fed,A,6,1
-1,2026-10-08,MP - Starved,B,10,4
-1,2026-10-08,MP - Fed,B,7,1
-1,2026-10-08,Aged MP - Fed,A,7,1
-1,2026-10-08,Control - Starved,B,7,3
-1,2026-10-08,Aged MP - Starved,B,13,6
-1,2026-10-08,Control - Fed,B,9,0
+exp_rep,date,treatment_code,treatment,treatment_rep,total,num_dead
+1,2026-10-08,CW - Fed,Aged MP - Fed,B,8,0
+1,2026-10-08,CW - Fed,Aged MP - Fed,A,7,1
+1,2026-10-08,CW - Starved,Aged MP - Starved,A,10,6
+1,2026-10-08,CW - Starved,Aged MP - Starved,B,13,6
+1,2026-10-08,Control - Fed,Control - Fed,A,10,1
+1,2026-10-08,Control - Fed,Control - Fed,B,9,0
+1,2026-10-08,Control - Starved,Control - Starved,A,8,4
+1,2026-10-08,Control - Starved,Control - Starved,B,7,3
+1,2026-10-08,AW - Fed,MP - Fed,A,6,1
+1,2026-10-08,AW - Fed,MP - Fed,B,7,1
+1,2026-10-08,AW - Starved,MP - Starved,A,10,3
+1,2026-10-08,AW - Starved,MP - Starved,B,10,4
+2,2026-10-15,CW - Fed,Aged MP - Fed,A,12,6
+2,2026-10-15,CW - Fed,Aged MP - Fed,B,11,7
+2,2026-10-15,CW - Starved,Aged MP - Starved,A,10,8
+2,2026-10-15,CW - Starved,Aged MP - Starved,B,10,9
+2,2026-10-15,Control - Fed,Control - Fed,A,9,1
+2,2026-10-15,Control - Fed,Control - Fed,B,10,6
+2,2026-10-15,Control - Starved,Control - Starved,A,11,8
+2,2026-10-15,Control - Starved,Control - Starved,B,5,4
+2,2026-10-15,AW - Fed,MP - Fed,A,8,5
+2,2026-10-15,AW - Fed,MP - Fed,B,8,5
+2,2026-10-15,AW - Starved,MP - Starved,A,9,7
+2,2026-10-15,AW - Starved,MP - Starved,B,9,9
