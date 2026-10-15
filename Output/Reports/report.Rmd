@@ -66,7 +66,7 @@ ctmax_data |>
 ```{r}
 
 ctmax.model = lmer(data = ctmax_data, 
-                   ctmax_c ~ MP_treatment * diet + (1|file_source))
+                   ctmax_c ~ MP_treatment * diet + (1|experiment_date/file_source))
 
 car::Anova(ctmax.model, type = "III")
 

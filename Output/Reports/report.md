@@ -1,20 +1,22 @@
 TITLE HERE
 ================
-2026-10-09
+2026-10-15
 
 ``` r
 
 surv_data |> 
   mutate(prop_mortality = num_dead /total) |> 
-  ggplot(aes(x = MP_treatment, y = prop_mortality, colour = diet)) + 
-  geom_point(size = 3) + 
+  ggplot(aes(x = MP_treatment, y = prop_mortality, fill = diet)) + 
+  geom_boxplot(position = position_dodge(width = 0.85),
+               outliers = F) + 
+  geom_point(alpha = 0.5, position = position_dodge(width = 0.85)) + 
   labs(x = "Treatment", 
        y = "Mortality (proportion)") + 
-  theme_matt() + 
+  theme_matt_facets() + 
   theme(legend.position = "right")
 ```
 
-<img src="../Figures/unnamed-chunk-1-1.png" alt="" style="display: block; margin: auto;" />
+<img src="../Figures/unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
 
 ``` r
 
@@ -28,22 +30,22 @@ ctmax_data |>
   theme(legend.position = "right")
 ```
 
-<img src="../Figures/unnamed-chunk-2-1.png" alt="" style="display: block; margin: auto;" />
+<img src="../Figures/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 ``` r
 
 ctmax.model = lmer(data = ctmax_data, 
-                   ctmax_c ~ MP_treatment * diet + (1|file_source))
+                   ctmax_c ~ MP_treatment * diet + (1|experiment_date/file_source))
 
 car::Anova(ctmax.model, type = "III")
 ## Analysis of Deviance Table (Type III Wald chisquare tests)
 ## 
 ## Response: ctmax_c
 ##                       Chisq Df Pr(>Chisq)    
-## (Intercept)       2702.6405  1  < 2.2e-16 ***
-## MP_treatment         0.1157  2     0.9438    
-## diet                15.1660  1  9.846e-05 ***
-## MP_treatment:diet    0.4815  2     0.7861    
+## (Intercept)       2430.1450  1  < 2.2e-16 ***
+## MP_treatment         0.3897  2  0.8229651    
+## diet                12.4603  1  0.0004157 ***
+## MP_treatment:diet    0.0997  2  0.9513910    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
