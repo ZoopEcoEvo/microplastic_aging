@@ -1,7 +1,7 @@
 ---
-title: Placeholder title for a scientific poster of approximately average length - this should be descriptive (can you summarize the main point?)
+title: Microplastic Aging Effects on Copepod Phisiology
 author:
-  - name: Author Number One
+  - name: Jackson Vanegas
     affil: 1
   - name: Author Number Two
     affil: 1
