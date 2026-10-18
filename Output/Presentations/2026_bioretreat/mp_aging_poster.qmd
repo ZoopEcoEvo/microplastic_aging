@@ -1,5 +1,5 @@
 ---
-title: "Does aging microplastics alter how microplastics affect the physiology of a freshwater copepod"
+title: "Does aging microplastics alter how particles affect the physiology of a freshwater copepod"
 author:
   - name: Jackson Vanegas
     affiliations:
@@ -40,7 +40,7 @@ format:
           height: 32in,
           margin: 0.5in,                  // white border around the whole poster (print safety)
           columns: 3,
-          column-widths: none,            // e.g. none or (1fr, 1.5fr, 1fr): relative widths, one per
+          column-widths: (1fr, 1.5fr, 1.5fr),            // e.g. none or (1fr, 1.5fr, 1fr): relative widths, one per
                                           // column (overrides `columns`; end each column
                                           // with {{< pagebreak >}}). none = equal widths.
           column-gap: 1em,                // space between columns
@@ -239,6 +239,8 @@ execute:
 # is deleted after the PDF is made, so nothing is saved next to this file.
 
 library(tidyverse)
+library(here)
+source(here("Scripts", "themes.R"))
 
 logos <- c(
   left  = "https://raw.githubusercontent.com/ZoopEcoEvo/lab_utilities/main/lab_logos/text_logo_white.png",
@@ -302,18 +304,50 @@ Does microplastic aging alter how these particles affect the physiology of a com
 
 \
 
-# Methods
-
-![](images/experimental_design.png){width="1000"}
-
 {{< pagebreak >}}
 
-# Results
+# Preliminary Results
 
-```{r morefigs, out.width='100%', fig.align='center', fig.cap='Descriptive figure caption here', fig.width=10, fig.height=7.5}
+```{r}
 
+ctmax_data = read.csv("https://raw.githubusercontent.com/ZoopEcoEvo/microplastic_aging/refs/heads/main/Output/Output_data/ctmax_data.csv")
 
-ggplot()
+surv_data = read.csv("https://raw.githubusercontent.com/ZoopEcoEvo/microplastic_aging/refs/heads/main/Raw_data/surv_data.csv")
+
+```
+
+```{r surv-plot, out.width='90%', fig.align='center', fig.cap='Descriptive figure caption here', fig.width=10, fig.height=7}
+
+surv_data |> 
+  mutate(prop_mortality = num_dead /total) |> 
+  separate_wider_delim(treatment, delim = " - ", 
+                       names = c("MP_treatment", "Diet")) |> 
+  mutate(MP_treatment = fct_relevel(MP_treatment, 
+                                    "Control", "MP", "Aged MP")) |> 
+  ggplot(aes(x = MP_treatment, y = prop_mortality, fill = Diet)) + 
+  geom_boxplot(position = position_dodge(width = 0.85),
+               outliers = F) + 
+  geom_point(alpha = 0.5, position = position_dodge(width = 0.85)) + 
+  scale_y_continuous(breaks = c(0,0.5,1)) + 
+  labs(x = "Treatment", 
+       y = "Mortality (proportion)") + 
+  theme_matt(base_size = 22) + 
+  theme(legend.position = "right")
+
+```
+
+```{r ctmax-plot, out.width='90%', fig.align='center', fig.cap='Descriptive figure caption here', fig.width=10, fig.height=7}
+
+ctmax_data |> 
+  mutate(MP_treatment = fct_relevel(MP_treatment, 
+                                    "Control", "MP", "Aged MP")) |> 
+  ggplot(aes(x = MP_treatment, y = ctmax_c, fill = diet)) + 
+  geom_boxplot(position = position_dodge(width = 0.75)) + 
+  geom_point(position = position_dodge(width = 0.75)) + 
+  labs(x = "Treatment", 
+       y = "CTmax (°C)") + 
+  theme_matt(base_size = 22) + 
+  theme(legend.position = "right")
 
 ```
 
@@ -321,15 +355,27 @@ ggplot()
 
 {{< pagebreak >}}
 
+# Methods
+
+![](images/experimental_design.png){width="90%"}
+
+\
+
 # Conclusion
 
-- Conclusions here
+- Starvation has major effects on both survival and thermal limits
+- Realistic microplastic concentrations have minimal effects on thermal limits, but may influence survival
+- Survival seems to be highly variable from week to week
+
+\
 
 # Next Steps
 
-Additional experimental replicates
+- Additional experimental replicates
 
-Dose-dependence of effects
+- Dose-dependence of effects
+
+\
 
 # Acknowledgements
 
