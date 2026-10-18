@@ -16,6 +16,7 @@ output:
 ```{r setup, include = FALSE}
 library(lme4)
 library(lmerTest)
+library(emmeans)
 
 # Lab plotting themes live in one shared file: theme_matt(), theme_matt_facets()
 source(here("Scripts", "themes.R"))
@@ -34,6 +35,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Mortality Data
+
 ```{r}
 
 surv_data |> 
@@ -48,6 +51,33 @@ surv_data |>
   theme(legend.position = "right")
 
 ```
+
+```{r}
+
+# Example GLMM with binomial response and a random intercept for 'cluster_id'
+model <- glmer(
+  cbind(num_dead, total - num_dead) ~ MP_treatment * diet + (1 | exp_rep/treatment_rep),
+  data = surv_data,
+  family = binomial(link = "logit")
+)
+# View summary and fixed effect estimates (log-odds)
+summary(model)
+
+
+# Perform omnibus test or pairwise comparisons across groups
+
+car::Anova(model, type = "III") # Likelihood ratio or Wald tests
+
+# Get estimated marginal means (proportions on the probability scale)
+emmeans(model, ~ MP_treatment * diet, type = "response")
+
+# Pairwise comparisons between groups
+pairs(emmeans(model, ~ MP_treatment * diet), adjust = "tukey")
+
+```
+
+
+## Thermal Limit Data
 
 ```{r}
 

@@ -38,6 +38,8 @@ if (make_report) {
                          names = c("MP_treatment", "diet")) |> 
     mutate(MP_treatment = fct_relevel(MP_treatment, "Control", "MP", "Aged MP"))
   
+  write.csv(ctmax_data, "Output/Output_data/ctmax_data.csv", row.names = F)
+  
   render(input = "Output/Reports/report.Rmd",
          output_format = "all",
          envir = new.env())
