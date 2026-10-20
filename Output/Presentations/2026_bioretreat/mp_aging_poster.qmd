@@ -44,7 +44,7 @@ format:
                                           // column (overrides `columns`; end each column
                                           // with {{< pagebreak >}}). none = equal widths.
           column-gap: 1em,                // space between columns
-          primary: rgb("#0b4545"),        // title bar, section boxes, column lines
+          primary: rgb("#435150"),        // title bar, section boxes, column lines
           secondary: rgb("#008080"),      // links, code accents
           title-text: white,
           body-text: black,
@@ -296,11 +296,17 @@ Does microplastic aging alter how these particles affect the physiology of a com
 
 \
 
-# Hypothesis
+# Hypotheses
 
-1.  Exposure to microplastics will decrease the thermal limits in the freshwater copepod *Skistodiaptomus pallidus.*
-2.  The upper thermal limit for copepods exposed to aged microplastics will be higher than the upper thermal limit for those exposed to un-aged microplastics.
-3.  Because of the nutritional content of biofilms, starved copepods with aged microplastics will exhibit a smaller decrease in thermal limit relative to the control copepods, while starved copepods with un-aged microplastics will exhibit a sharp decrease in thermal limits.
+**Hypothesis 1**: Exposure to microplastics will decrease the thermal limits in the freshwater copepod *Skistodiaptomus pallidus.*
+
+\
+
+**Hypothesis 2**: The upper thermal limit for copepods exposed to aged microplastics will be higher than the upper thermal limit for those exposed to un-aged microplastics.
+
+\
+
+**Hypothesis 3**: Because of the nutritional content of biofilms, starved copepods with aged microplastics will exhibit a smaller decrease in thermal limit relative to the control copepods, while starved copepods with un-aged microplastics will exhibit a sharp decrease in thermal limits.
 
 \
 
@@ -316,7 +322,7 @@ surv_data = read.csv("https://raw.githubusercontent.com/ZoopEcoEvo/microplastic_
 
 ```
 
-```{r surv-plot, out.width='90%', fig.align='center', fig.cap='Descriptive figure caption here', fig.width=10, fig.height=7}
+```{r surv-plot, out.width='90%', fig.align='center', fig.cap='Proportional mortality in the different treatments. Survival was measured after one week. Each point shows mortality in one of the replicates, but replicates across experiments are pooled together. Mortality was consistently higher in the starved treatments.', fig.width=10, fig.height=7}
 
 surv_data |> 
   mutate(prop_mortality = num_dead /total) |> 
@@ -328,6 +334,7 @@ surv_data |>
   geom_boxplot(position = position_dodge(width = 0.85),
                outliers = F) + 
   geom_point(alpha = 0.5, position = position_dodge(width = 0.85)) + 
+  scale_fill_manual(values = c("#AC2431", "#F9DA88")) + 
   scale_y_continuous(breaks = c(0,0.5,1)) + 
   labs(x = "Treatment", 
        y = "Mortality (proportion)") + 
@@ -336,7 +343,7 @@ surv_data |>
 
 ```
 
-```{r ctmax-plot, out.width='90%', fig.align='center', fig.cap='Descriptive figure caption here', fig.width=10, fig.height=7}
+```{r ctmax-plot, out.width='90%', fig.align='center', fig.cap='Upper thermal limits for copepods in the different treatments. CTmax was measured after one week. Each individual point represents the observed upper thermal limit of an individual copepod. Data from the two experimental replicates is pooled.', fig.width=10, fig.height=7}
 
 ctmax_data |> 
   mutate(MP_treatment = fct_relevel(MP_treatment, 
@@ -344,6 +351,7 @@ ctmax_data |>
   ggplot(aes(x = MP_treatment, y = ctmax_c, fill = diet)) + 
   geom_boxplot(position = position_dodge(width = 0.75)) + 
   geom_point(position = position_dodge(width = 0.75)) + 
+  scale_fill_manual(values = c("#AC2431", "#F9DA88")) + 
   labs(x = "Treatment", 
        y = "CTmax (°C)") + 
   theme_matt(base_size = 22) + 
@@ -356,6 +364,8 @@ ctmax_data |>
 {{< pagebreak >}}
 
 # Methods
+
+\
 
 ![](images/experimental_design.png){width="90%"}
 
