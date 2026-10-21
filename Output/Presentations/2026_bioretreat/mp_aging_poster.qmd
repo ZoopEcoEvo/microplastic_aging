@@ -36,8 +36,8 @@ format:
         //  POSTER SETTINGS  (same options as posterdown_html; edit freely)
         // =====================================================================
         #let poster = (
-          width: 45in,
-          height: 32in,
+          width: 36in,
+          height: 24in,
           margin: 0.5in,                  // white border around the whole poster (print safety)
           columns: 3,
           column-widths: (1fr, 1.5fr, 1.5fr),            // e.g. none or (1fr, 1.5fr, 1fr): relative widths, one per
@@ -59,7 +59,7 @@ format:
           caption-size: 20pt,
           table-row-padding: 10pt,        // space above and below the text in each table row
           hyphenate: false,               // true = split long words across lines with a hyphen
-          justify: true,                  // false = ragged right edge (no stretched word gaps)
+          justify: false,                  // false = ragged right edge (no stretched word gaps)
           list-markers: ([•], [–]),       // bullet shape per level: first, second, ... e.g. [▸], [◦], [–], [·]
           list-spacing: 0.9em,            // space between top-level bullets
           sublist-spacing: 0.5em,         // space between a bullet and its sub-bullets
@@ -282,33 +282,17 @@ cat("```\n")
 
 - Copepods are important, highly selective aquatic grazers
 
-- Biofilms can form on surface of microplastics
-
-  - Nutritional benefit?
-
-  - Increased exposure via reduced selectivity?
-
- 
+- Biofilms can form on surface of microplastics (Nutritional benefit? Increased exposure via reduced selectivity?)
 
 # Central Question
 
 Does microplastic aging alter how these particles affect the physiology of a common freshwater copepod?
 
-\
-
 # Hypotheses
 
-**Hypothesis 1**: Exposure to microplastics will decrease the thermal limits in the freshwater copepod *Skistodiaptomus pallidus.*
-
-\
-
-**Hypothesis 2**: The upper thermal limit for copepods exposed to aged microplastics will be higher than the upper thermal limit for those exposed to un-aged microplastics.
-
-\
-
-**Hypothesis 3**: Because of the nutritional content of biofilms, starved copepods with aged microplastics will exhibit a smaller decrease in thermal limit relative to the control copepods, while starved copepods with un-aged microplastics will exhibit a sharp decrease in thermal limits.
-
-\
+1.  Exposure to microplastics will **decrease** copepod thermal limits*.*
+2.  Thermal limits of fed copepods will be **higher when exposed to aged than un-aged** microplastics.
+3.  Because of the nutritional content of biofilms, this **pattern flips for starved copepods**.\
 
 {{< pagebreak >}}
 
@@ -322,7 +306,7 @@ surv_data = read.csv("https://raw.githubusercontent.com/ZoopEcoEvo/microplastic_
 
 ```
 
-```{r surv-plot, out.width='90%', fig.align='center', fig.cap='Proportional mortality in the different treatments. Survival was measured after one week. Each point shows mortality in one of the replicates, but replicates across experiments are pooled together. Mortality was consistently higher in the starved treatments.', fig.width=10, fig.height=7}
+```{r surv-plot, out.width='90%', fig.align='center', fig.cap='Proportional mortality in the different treatments. Survival was measured after one week. Each point shows mortality in one of the replicates, but replicates across experiments are pooled together. Mortality was consistently higher in the starved treatments.', fig.width=10, fig.height=6}
 
 surv_data |> 
   mutate(prop_mortality = num_dead /total) |> 
@@ -343,7 +327,7 @@ surv_data |>
 
 ```
 
-```{r ctmax-plot, out.width='90%', fig.align='center', fig.cap='Upper thermal limits for copepods in the different treatments. CTmax was measured after one week. Each individual point represents the observed upper thermal limit of an individual copepod. Data from the two experimental replicates is pooled.', fig.width=10, fig.height=7}
+```{r ctmax-plot, out.width='90%', fig.align='center', fig.cap='Upper thermal limits for copepods in the different treatments. CTmax was measured after one week. Each individual point represents the observed upper thermal limit of an individual copepod. Data from the two experimental replicates is pooled.', fig.width=10, fig.height=6}
 
 ctmax_data |> 
   mutate(MP_treatment = fct_relevel(MP_treatment, 
@@ -363,21 +347,15 @@ ctmax_data |>
 
 {{< pagebreak >}}
 
-# Methods
-
-\
+# Methods 
 
 ![](images/experimental_design.png){width="90%"}
-
-\
 
 # Conclusion
 
 - Starvation has major effects on both survival and thermal limits
 - Realistic microplastic concentrations have minimal effects on thermal limits, but may influence survival
-- Survival seems to be highly variable from week to week
-
-\
+- Survival seems to be highly variable across weeks
 
 # Next Steps
 
@@ -385,8 +363,6 @@ ctmax_data |>
 
 - Dose-dependence of effects
 
-\
-
 # Acknowledgements
 
-I would like to thank Jose Pineiro for help collecting the animals. I would also like to thank the UMass Lowell Honors College and the Independent University Alumni Association for funding this project.
+I would like to thank Jose Pineiro for help collecting the animals and the UMass Lowell Honors College and the Independent University Alumni Association for funding.
