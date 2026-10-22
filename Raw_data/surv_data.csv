@@ -23,3 +23,15 @@ exp_rep,date,treatment_code,treatment,treatment_rep,total,num_dead
 2,2026-10-15,AW - Fed,MP - Fed,B,8,5
 2,2026-10-15,AW - Starved,MP - Starved,A,9,7
 2,2026-10-15,AW - Starved,MP - Starved,B,9,9
+3,2026-10-22,CW - Fed,Aged MP - Fed,A,9,1
+3,2026-10-22,CW - Fed,Aged MP - Fed,B,10,3
+3,2026-10-22,CW - Starved,Aged MP - Starved,A,10,3
+3,2026-10-22,CW - Starved,Aged MP - Starved,B,10,5
+3,2026-10-22,Control - Fed,Control - Fed,A,10,2
+3,2026-10-22,Control - Fed,Control - Fed,B,10,0
+3,2026-10-22,Control - Starved,Control - Starved,A,10,8
+3,2026-10-22,Control - Starved,Control - Starved,B,10,5
+3,2026-10-22,AW - Fed,MP - Fed,A,10,4
+3,2026-10-22,AW - Fed,MP - Fed,B,10,1
+3,2026-10-22,AW - Starved,MP - Starved,A,10,2
+3,2026-10-22,AW - Starved,MP - Starved,B,11,4

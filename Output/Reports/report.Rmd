@@ -69,10 +69,7 @@ summary(model)
 car::Anova(model, type = "III") # Likelihood ratio or Wald tests
 
 # Get estimated marginal means (proportions on the probability scale)
-emmeans(model, ~ MP_treatment * diet, type = "response")
-
-# Pairwise comparisons between groups
-pairs(emmeans(model, ~ MP_treatment * diet), adjust = "tukey")
+emmeans(model, ~ MP_treatment * diet, type = "response") |> plot()
 
 ```
 
