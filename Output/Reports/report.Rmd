@@ -89,6 +89,15 @@ ctmax_data |>
 
 ```
 
+```{r}
+
+ctmax_data |> 
+  filter(group_id == "Control - Fed") |> 
+  ggplot(aes(x = experiment_date, y = ctmax_c)) + 
+  geom_point()
+
+```
+
 
 ```{r}
 
