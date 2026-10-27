@@ -13,7 +13,7 @@ library(tidyverse)
 
 # Choose which steps to run -----------------------------------------------
 process_data    <- FALSE # Raw_data/ -> Output/Output_data/
-make_report     <- FALSE # Output/Reports/report.Rmd -> figures + report
+make_report     <- T # Output/Reports/report.Rmd -> figures + report
 knit_manuscript <- FALSE # Manuscript/manuscript_name.Rmd -> Output/Drafts/
 
 # Step 1: Process the raw data ---------------------------------------------
