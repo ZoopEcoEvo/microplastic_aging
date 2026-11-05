@@ -1,6 +1,6 @@
 TITLE HERE
 ================
-2026-10-29
+2026-11-05
 
 - [Mortality Data](#mortality-data)
 - [Thermal Limit Data](#thermal-limit-data)
@@ -39,36 +39,36 @@ summary(model)
 ##    Data: surv_data
 ## 
 ##      AIC      BIC   logLik deviance df.resid 
-##    178.6    193.6    -81.3    162.6       40 
+##    228.7    245.5   -106.4    212.7       52 
 ## 
 ## Scaled residuals: 
 ##      Min       1Q   Median       3Q      Max 
-## -1.69713 -0.52457  0.07433  0.36196  1.82047 
+## -2.05771 -0.58461  0.03687  0.55052  2.05460 
 ## 
 ## Random effects:
 ##  Groups                Name        Variance Std.Dev.
-##  treatment_rep:exp_rep (Intercept) 0.1059   0.3254  
-##  exp_rep               (Intercept) 0.5451   0.7383  
-## Number of obs: 48, groups:  treatment_rep:exp_rep, 8; exp_rep, 4
+##  treatment_rep:exp_rep (Intercept) 0.05645  0.2376  
+##  exp_rep               (Intercept) 0.40575  0.6370  
+## Number of obs: 60, groups:  treatment_rep:exp_rep, 10; exp_rep, 5
 ## 
 ## Fixed effects:
 ##                                 Estimate Std. Error z value Pr(>|z|)    
-## (Intercept)                      -1.6992     0.4999  -3.399 0.000676 ***
-## MP_treatmentMP                    1.2557     0.4105   3.059 0.002223 ** 
-## MP_treatmentAged MP               0.6524     0.4108   1.588 0.112270    
-## dietStarved                       2.2713     0.4156   5.465 4.64e-08 ***
-## MP_treatmentMP:dietStarved       -1.4714     0.5445  -2.702 0.006886 ** 
-## MP_treatmentAged MP:dietStarved  -0.7351     0.5416  -1.357 0.174725    
+## (Intercept)                      -1.5421     0.3988  -3.867  0.00011 ***
+## MP_treatmentMP                    1.0243     0.3527   2.905  0.00368 ** 
+## MP_treatmentAged MP               0.6724     0.3519   1.911  0.05600 .  
+## dietStarved                       1.9602     0.3526   5.559 2.72e-08 ***
+## MP_treatmentMP:dietStarved       -1.0387     0.4699  -2.210  0.02708 *  
+## MP_treatmentAged MP:dietStarved  -0.6455     0.4677  -1.380  0.16747    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Correlation of Fixed Effects:
 ##             (Intr) MP_tMP MP_tAMP dtStrv MP_MP:
-## MP_trtmntMP -0.485                             
-## MP_trtmnAMP -0.476  0.579                      
-## dietStarved -0.492  0.594  0.576               
-## MP_trtmMP:S  0.367 -0.756 -0.438  -0.749       
-## MP_trtAMP:S  0.361 -0.441 -0.760  -0.739  0.563
+## MP_trtmntMP -0.510                             
+## MP_trtmnAMP -0.506  0.572                      
+## dietStarved -0.519  0.583  0.575               
+## MP_trtmMP:S  0.382 -0.751 -0.430  -0.740       
+## MP_trtAMP:S  0.380 -0.431 -0.753  -0.737  0.553
 
 
 # Perform omnibus test or pairwise comparisons across groups
@@ -78,10 +78,10 @@ car::Anova(model, type = "III") # Likelihood ratio or Wald tests
 ## 
 ## Response: cbind(num_dead, total - num_dead)
 ##                     Chisq Df Pr(>Chisq)    
-## (Intercept)       11.5547  1  0.0006758 ***
-## MP_treatment       9.4066  2  0.0090652 ** 
-## diet              29.8629  1  4.637e-08 ***
-## MP_treatment:diet  7.3425  2  0.0254447 *  
+## (Intercept)       14.9507  1  0.0001104 ***
+## MP_treatment       8.5289  2  0.0140598 *  
+## diet              30.8986  1  2.719e-08 ***
+## MP_treatment:diet  4.9217  2  0.0853624 .  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -127,10 +127,10 @@ car::Anova(ctmax.model, type = "III")
 ## 
 ## Response: ctmax_c
 ##                       Chisq Df Pr(>Chisq)    
-## (Intercept)       4467.7781  1  < 2.2e-16 ***
-## MP_treatment         0.3186  2     0.8527    
-## diet                22.9024  1  1.704e-06 ***
-## MP_treatment:diet    0.8838  2     0.6428    
+## (Intercept)       6211.8752  1  < 2.2e-16 ***
+## MP_treatment         0.5835  2      0.747    
+## diet                29.7723  1  4.859e-08 ***
+## MP_treatment:diet    2.9838  2      0.225    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
