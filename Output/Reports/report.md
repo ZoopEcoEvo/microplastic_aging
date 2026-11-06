@@ -127,10 +127,10 @@ car::Anova(ctmax.model, type = "III")
 ## 
 ## Response: ctmax_c
 ##                       Chisq Df Pr(>Chisq)    
-## (Intercept)       6211.8752  1  < 2.2e-16 ***
-## MP_treatment         0.5835  2      0.747    
-## diet                29.7723  1  4.859e-08 ***
-## MP_treatment:diet    2.9838  2      0.225    
+## (Intercept)       5018.2599  1  < 2.2e-16 ***
+## MP_treatment         0.1930  2     0.9080    
+## diet                21.1961  1  4.146e-06 ***
+## MP_treatment:diet    0.3188  2     0.8527    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
