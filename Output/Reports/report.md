@@ -1,11 +1,33 @@
 TITLE HERE
 ================
-2026-11-05
+2026-11-12
 
-- [Mortality Data](#mortality-data)
-- [Thermal Limit Data](#thermal-limit-data)
+- [To Do List](#to-do-list)
+- [Background](#background)
+- [Methods](#methods)
+- [Results](#results)
+  - [Mortality Data](#mortality-data)
+  - [Thermal Limit Data](#thermal-limit-data)
 
-## Mortality Data
+## To Do List
+
+- Import background text (maybe from proposal?)
+
+- Write up methods section (manuscript style)
+
+- Work through the lab code tutorials
+
+- Think about a title for the report/thesis
+
+- Review hypotheses / hypothesis testing section in proposal
+
+## Background
+
+## Methods
+
+## Results
+
+### Mortality Data
 
 ``` r
 
@@ -21,7 +43,7 @@ surv_data |>
   theme(legend.position = "right")
 ```
 
-<img src="../Figures/unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
+<img src="../Figures/unnamed-chunk-1-1.png" alt="" style="display: block; margin: auto;" />
 
 ``` r
 
@@ -38,8 +60,8 @@ summary(model)
 ## Formula: cbind(num_dead, total - num_dead) ~ MP_treatment * diet + (1 |      exp_rep/treatment_rep)
 ##    Data: surv_data
 ## 
-##      AIC      BIC   logLik deviance df.resid 
-##    228.7    245.5   -106.4    212.7       52 
+##       AIC       BIC    logLik -2*log(L)  df.resid 
+##     228.7     245.5    -106.4     212.7        52 
 ## 
 ## Scaled residuals: 
 ##      Min       1Q   Median       3Q      Max 
@@ -79,9 +101,9 @@ car::Anova(model, type = "III") # Likelihood ratio or Wald tests
 ## Response: cbind(num_dead, total - num_dead)
 ##                     Chisq Df Pr(>Chisq)    
 ## (Intercept)       14.9507  1  0.0001104 ***
-## MP_treatment       8.5289  2  0.0140598 *  
-## diet              30.8986  1  2.719e-08 ***
-## MP_treatment:diet  4.9217  2  0.0853624 .  
+## MP_treatment       8.5289  2  0.0140597 *  
+## diet              30.8987  1  2.719e-08 ***
+## MP_treatment:diet  4.9217  2  0.0853623 .  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -89,9 +111,9 @@ car::Anova(model, type = "III") # Likelihood ratio or Wald tests
 emmeans(model, ~ MP_treatment * diet, type = "response") |> plot()
 ```
 
-<img src="../Figures/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="../Figures/unnamed-chunk-2-1.png" alt="" style="display: block; margin: auto;" />
 
-## Thermal Limit Data
+### Thermal Limit Data
 
 ``` r
 
@@ -105,7 +127,7 @@ ctmax_data |>
   theme(legend.position = "right")
 ```
 
-<img src="../Figures/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="../Figures/unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" />
 
 ``` r
 
@@ -115,7 +137,7 @@ ctmax_data |>
   geom_point()
 ```
 
-<img src="../Figures/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="../Figures/unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" />
 
 ``` r
 

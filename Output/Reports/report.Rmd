@@ -35,7 +35,25 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Mortality Data
+## To Do List
+
+- Import background text (maybe from proposal?)
+
+- Write up methods section (manuscript style)
+
+- Work through the lab code tutorials
+
+- Think about a title for the report/thesis
+
+- Review hypotheses / hypothesis testing section in proposal
+
+## Background
+
+## Methods 
+
+## Results
+
+### Mortality Data
 
 ```{r}
 
@@ -73,8 +91,7 @@ emmeans(model, ~ MP_treatment * diet, type = "response") |> plot()
 
 ```
 
-
-## Thermal Limit Data
+### Thermal Limit Data
 
 ```{r}
 
@@ -98,7 +115,6 @@ ctmax_data |>
 
 ```
 
-
 ```{r}
 
 ctmax.model = lmer(data = ctmax_data, 
@@ -107,4 +123,3 @@ ctmax.model = lmer(data = ctmax_data,
 car::Anova(ctmax.model, type = "III")
 
 ```
-
