@@ -41,6 +41,8 @@ knitr::opts_chunk$set(
 
 - Think about a title for the report/thesis
 
+- Complex effects between starvation and microplastics on copepod physiology
+
 - Review hypotheses / hypothesis testing section in proposal
 
 ## Background
@@ -63,7 +65,7 @@ Fill 12 120ml jars with 100mL of DIO water. Add 10uL of CW microplastics to 4 of
 
 **Surivial Counting**
 
-Take the styrofoam lid with the 12 jars back to the work bench. Grab 12 petri dishes and 12 petri dish lids. Take 1 jar, 1 petri, dish, 1 petri dish lid, a pipette, and a large beaker over to the dissecting scope. Pour about half of the contents from the jar into the petri dish and examine under the microscope. If any copepods are present pipette them from the petri dish and back in the jar. Once the petri dish is empty dispose of the petri water into the large beaker. Then pour the remaining contents of the jar into the same petri dish. Count the number of copepods dead and alive, and take not of the numbers. Remove the labe from the jar and place on the lid of the petri dish after counting is complete. Set the petri dish aside and repeat for every jar until all 12 are complete.
+Take the styrafoam lid with the 12 jars back to the work bench. Grab 12 petri dishes and 12 petri dish lids. Take 1 jar, 1 petri, dish, 1 petri dish lid, a pipette, and a large beaker over to the dissecting scope. Pour about half of the contents from the jar into the petri dish and examine under the microscope. If any copepods are present pipette them from the petri dish and back in the jar. Once the petri dish is empty dispose of the petri water into the large beaker. Then pour the remaining contents of the jar into the same petri dish. Count the number of copepods dead and alive, and take not of the numbers. Remove the labe from the jar and place on the lid of the petri dish after counting is complete. Set the petri dish aside and repeat for every jar until all 12 are complete.
 
 **CTmax**
 
