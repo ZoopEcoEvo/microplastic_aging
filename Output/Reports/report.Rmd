@@ -45,6 +45,8 @@ knitr::opts_chunk$set(
 
 - Review hypotheses / hypothesis testing section in proposal
 
+- Figure on synergistic vs. antagonistic interactions
+
 ## Background
 
 Microplastics are a growing concern in the world today. Microplastics are 5mm or less in size and vary in shape and in composition (e.g. polyethylene, polypropylene, etc). The amount of these microplastics has been increasing over the years (Reddy and Lau, 2020), but not much is known about their long term effects on living organisms. Microplastics have been observed to acquire microbial biofilms under natural conditions (Ballesté et al., 2024).
