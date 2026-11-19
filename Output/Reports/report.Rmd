@@ -47,6 +47,10 @@ knitr::opts_chunk$set(
 
 - Figure on synergistic vs. antagonistic interactions
 
+- Section in background on hypothesis
+
+- Annotate non model chunks
+
 ## Background
 
 Microplastics are a growing concern in the world today. Microplastics are 5mm or less in size and vary in shape and in composition (e.g. polyethylene, polypropylene, etc). The amount of these microplastics has been increasing over the years (Reddy and Lau, 2020), but not much is known about their long term effects on living organisms. Microplastics have been observed to acquire microbial biofilms under natural conditions (Ballesté et al., 2024).
@@ -94,6 +98,15 @@ surv_data |>
 
 ```
 
+```{r mortality-summary}
+surv_data |> 
+  mutate(prop_mortality = num_dead /total)  %>% 
+  group_by(treatment_code, MP_treatment, diet) %>% 
+  summarize(mean_mortality=mean(prop_mortality)) %>% 
+  knitr::kable(digits=2)
+  
+```
+
 ```{r}
 
 # Example GLMM with binomial response and a random intercept for 'cluster_id'
@@ -128,6 +141,13 @@ ctmax_data |>
   theme_matt() + 
   theme(legend.position = "right")
 
+```
+
+```{r ctmax-summary}
+ctmax_data %>% 
+  group_by(group_id, MP_treatment, diet) %>% 
+  summarize(mean_ctmax=mean(ctmax_c)) %>% 
+  knitr::kable(digits=2)
 ```
 
 ```{r}
