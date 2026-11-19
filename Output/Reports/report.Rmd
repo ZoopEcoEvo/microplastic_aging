@@ -37,10 +37,6 @@ knitr::opts_chunk$set(
 
 ## To Do List
 
-- Import background text (maybe from proposal?)
-
-- Write up methods section (manuscript style)
-
 - Work through the lab code tutorials
 
 - Think about a title for the report/thesis
